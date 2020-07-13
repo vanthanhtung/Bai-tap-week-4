@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="QLSP.css">
+</head>
+<body onload="hienThi()">
+<h1>Add new product!</h1>
+<input type="text" id="input" placeholder="New product">
+<button type="button" onclick="addproduct()" class="AddButton">Add</button>
+<h2>Display all product</h2>
+<h3>Product Name <span id="tongSoSP"></span></h3>
+
+<div id="table" id="DisplayTable"></div>
+
+<script>
+    let tenSP =["Sony Xperia","Samsung Galaxy","Nokia"];
+    function hienThi() {
+        let hienThi = "<table>";
+        document.getElementById('tongSoSP').innerHTML = tenSP.length;
+        for (i=0;i<tenSP.length;i++) {
+            hienThi += "<tr>";
+            hienThi += "<td>" +tenSP[i]+ "</td>";
+            hienThi += "<td>" +"<button onclick='edit("+i+")'>Edit</button>" + "</td>";
+            hienThi += "<td>" +"<button onclick='xoa("+i+")'>Delete</button>" + "</td>";
+            hienThi += "</tr>"
+        }
+        hienThi += "</table>";
+        document.getElementById('table').innerHTML = hienThi;
+    }
+
+    function addproduct() {
+        let product = document.getElementById('input').value;
+        tenSP.push(product);
+        hienThi();
+        document.getElementById('input').value = "";
+    }
+
+    function edit(maSP) {
+        let newName = prompt("nhập tên mới!");
+        tenSP.splice(maSP,1,newName);
+        hienThi();
+    }
+    function xoa(maSP) {
+        tenSP.splice(maSP,1);
+        hienThi();
+    }
+</script>
+</body>
+</html>
