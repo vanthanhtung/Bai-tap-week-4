@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Check kí tự</h1>
+<p>Mảng vừa tạo: <span id="hienThiMang"></span></p>
+<p>nhập kí tự cần check!</p><input type="text" id="input">
+<button type="button" onclick="check()">Click here to Check!!!</button> <br>
+<p>Số lần xuất hiện: </p>
+<div id="messageDiv"></div>
+
+<script>
+    var mangT =[];
+    var doDaiMang = parseInt(prompt("Nhập vào độ dài mảng"));
+    for (let i = 0; i < doDaiMang; i++) {
+        mangT.push(prompt("Nhập các phần tử cho mảng"));
+    }
+    document.getElementById('hienThiMang').innerHTML = mangT.join(" ");
+    let count = 0;
+    function check() {
+        let kitu = document.getElementById('input').value;
+        for (let i = 0; i <mangT.length; i++) {
+            if (mangT[i] == kitu) {
+                count ++;
+            }
+        }
+        document.getElementById('messageDiv').innerHTML = count;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="tinhToan()">
+<script>
+    function tinhToan() {
+        let so1 = parseInt(prompt("nhập số thứ nhất!"));
+        let so2 = parseInt(prompt("nhập số thứ hai!"));
+        let so3 = parseInt(prompt("nhập số thứ ba!"));
+        let min = so1;
+        if (min >so2) {
+            min = so2;
+        }
+        if (min>so3) {
+            min = so3;
+        }
+        document.write("Số nhỏ nhất là: " + min);
+    }
+</script>
+</body>
+</html>

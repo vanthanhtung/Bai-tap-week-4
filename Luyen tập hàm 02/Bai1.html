@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập vào 1 số </p>
+<input type="text" id="input">
+<button type="button" onclick="nhapXuat()"> Tính bình phương</button>
+<p>Kết quả: <span id="hienThi"></span></p>
+
+<script>
+    function nhapXuat() {
+        let input =parseInt(document.getElementById('input').value);
+        let result = tinhBP(input);
+        document.getElementById('hienThi').innerHTML = result;
+    }
+
+    function tinhBP(number) {
+        let result = number * number ;
+        return result;
+    }
+</script>
+</body>
+</html>

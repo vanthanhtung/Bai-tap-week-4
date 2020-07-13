@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập vào bán kính hình tròn! </p>
+<input type="text" id="input">
+<button type="button" onclick="nhapXuat()"> Tính toán !!</button>
+<p>Chu vi: <span id="hienThiCV"></span></p>
+<p>Diện tích: <span id="hienThiDT"></span></p>
+
+<script>
+    function nhapXuat() {
+        let bankinh = parseInt(document.getElementById('input').value);
+        let result1 = tinhCV(bankinh);
+        let result2 = tinhDT(bankinh);
+        document.getElementById('hienThiCV').innerHTML = result1;
+        document.getElementById('hienThiDT').innerHTML = result2;
+    }
+
+    function tinhCV(r) {
+        return 2*r*Math.PI;
+    }
+    function tinhDT(r) {
+        return r*r*Math.PI;
+    }
+
+</script>
+
+</body>
+</html>
