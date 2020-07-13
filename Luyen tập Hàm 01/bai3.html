@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="nhapXuat()">
+<script>
+
+    function nhapXuat() {
+        let a = parseInt(prompt("Nhập vào số thứ nhất!"));
+        let b = parseInt(prompt("Nhập vào số thứ hai!"));
+        if(a>b) {
+            alert("số thứ nhất lớn hơn số thứ hai!!!");
+        }
+        else {
+            let result = a+b;
+            document.write("Tổng của 2 số là: " + result);
+        }
+    }
+
+</script>
+</body>
+</html>

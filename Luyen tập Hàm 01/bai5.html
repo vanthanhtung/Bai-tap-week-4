@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập vào tên 1 ngôi sao!</p>
+<input type="text" id="input">
+<button type="button" onclick="nhapXuat()">Kiểm tra chòm sao</button>
+<p>Ngôi sao này thuộc chòm sao: <span id="hienThi"></span></p>
+
+<script>
+    let ngoiSao = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let chomSao = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+
+    let viTri = 0;
+
+    function nhapXuat() {
+        let input = document.getElementById('input').value;
+        let result = check(input);
+        document.getElementById('hienThi').innerHTML = result;
+    }
+
+    function check(sao) {
+        for ( viTri = 0; viTri <ngoiSao.length ; viTri++) {
+            if (ngoiSao[viTri]== sao) {
+                return chomSao[viTri]; break;
+            }
+        }
+        if (viTri == ngoiSao.length) {
+            alert("Ko có ngôi sao này!");
+        }
+    }
+</script>
+</body>
+</html>
