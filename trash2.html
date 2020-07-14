@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let person ={
+        name:['bob','smith'],
+        age: 32,
+        gender: 'male',
+        interest: ['music', 'skiing'],
+        bio: function () {
+            alert(this.name[0]+ " "+this.name[1]+ ' is '+ this.age +' years old. He likes '+ this.interest[0]+" "+ this.interest[1] +'.');
+        },
+        greeting: function () {
+            alert('Hi! i am' + this.name[0]+'.');
+        }
+    };
+    person.farewell = function() { alert("Bye everybody!"); }
+    person.farewell();
+
+</script>
+</body>
+</html>
