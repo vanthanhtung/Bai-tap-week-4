@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="mycanvas" width="1368px" height="768px"
+        style="border:1px #d3d3d3;" ></canvas>
+
+<script>
+    let Rectangle = function (x,y) {
+        this.x = x;
+        this.y = y;
+        this.tinhDienTich= function (x,y) {
+            return this.x * this.y;
+        }
+        this.tinhChuVi = function (x,y) {
+            return (this.x + this.y)*2 ;
+        }
+        this.creatRectangle = function () {
+            var ctx = document.getElementById('mycanvas').getContext("2d");
+            ctx.beginPath();
+            ctx.rect(95,50,x,y);
+            ctx.stroke();
+            ctx.fill();
+        }
+    }
+    let retangle1 = new Rectangle(600,500);
+    alert("chuvi: "+ retangle1.tinhChuVi(600,500));
+    alert("dientich: "+ retangle1.tinhDienTich(600,500));
+    retangle1.creatRectangle();
+
+</script>
+</body>
+</html>
